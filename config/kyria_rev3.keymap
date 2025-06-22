@@ -16,6 +16,9 @@
 };
  */
 
+//SQT is used for single quote, SEMI is used for semicolon
+
+
 / {
     keymap {
         compatible = "zmk,keymap";
@@ -23,27 +26,27 @@
         default_layer {
             // ---------------------------------------------------------------------------------------------------------------------------------
             // |  TAB  |  Q  |  W  |  E   |  R   |  T   |                                          |  Y   |  U    |  I    |  O   |   P   |   BSPC  |
-            // |  TAB  |  A  |  S  |  D   |  F   |  G   |                                          |  H   |  J    |  K    |  L   |   ;   |   '  |
-            // | SHIFT |  Z  |  X  |  C   |  V   |  B   | L SHIFT | L SHIFT |  | LAYER 1 | L SHIFT |  N   |  M    |  ,    |  .   |   /   | CTRL |
-            //                     | GUI  | DEL  | RET  |  SPACE  |   ESC   |  |   RET   |  SPACE  | TAB  | BSPC  | R-ALT |
+            // |  LCTRL  |  A  |  S  |  D   |  F   |  G   |                                          |  H   |  J    |  K    |  L   |   ;   |   RET  |
+            // | LSHIFT |  Z  |  X  |  C   |  V   |  B   | L SHIFT | L SHIFT |  | LAYER 1 | L SHIFT |  N   |  M    |  ,    |  .   |   /   | CTRL |
+            //                     | GUI  | LALT  | lt-1/SPACE  |  SPACE  |   ESC   |  |   ESC   |  BSPC  | SPACE  | RET  | R-ALT |
             bindings = <
             &kp TAB   &kp Q &kp W &kp E &kp R &kp T                                                  &kp Y &kp U  &kp I     &kp O   &kp P    &kp BSPC
-            &kp TAB   &kp A &kp S &kp D &kp F &kp G                                                  &kp H &kp J  &kp K     &kp L   &kp SEMI &kp SQT
+            &kp LCTRL   &kp A &kp S &kp D &kp F &kp G                                                  &kp H &kp J  &kp K     &kp L   &kp SEMI &kp RET
             &kp LSHFT &kp Z &kp X &kp C &kp V &kp B &kp LSHFT &kp LSHFT            &mo 1   &kp LSHFT &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &kp RCTRL
-            &kp LGUI &kp DEL &kp RET &kp SPACE &kp ESC       &kp RET &kp SPACE &kp TAB &kp BSPC &kp RALT
+            &kp LGUI &kp LALT &lt 1 SPACE &kp SPACE &kp ESC       &kp ESC &kp BSPC &kp SPACE &kp RET &kp RALT
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
         };
         function_layer {
             // ---------------------------------------------------------------------------------------------------------------------------------
-            // |       |      |BT_CLR|BTSEL0|BTSEL1|BTSEL2|                                         |      |      |      |      |      |      |
-            // |       |      |      |BTSEL3|BTSEL4|      |                                         |      |      |      |      |      |      |
+            // |       |      |BT_CLR|BTSEL0|BTSEL1|BTSEL2|                                         |      |      |  UP    |      |      |   DEL   |
+            // |       |      |      |BTSEL3|BTSEL4|      |                                         |      | LEFT |  DOWN  | RIGHT|      |      |
             // |       |      |      |      |      |      |      |      |      |      |      |      |      |      |      |      |      |      |
             //                       |      |      |      |      |      |      |      |      |      |      |      |      |
             bindings = <
-            &trans &trans &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2              &trans &trans &trans &trans &trans &trans
-            &trans &trans &trans     &bt BT_SEL 3 &bt BT_SEL 4 &trans                    &trans &trans &trans &trans &trans &trans
+            &trans &trans &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2              &trans &trans &kp UP &trans &trans &kp DEL
+            &trans &trans &trans     &bt BT_SEL 3 &bt BT_SEL 4 &trans                    &trans &kp LEFT &kp DOWN &kp RIGHT &trans &trans
             &trans &trans &trans &trans &trans &trans &trans &trans        &trans &trans &trans &trans &trans &trans &trans &trans
             &trans &trans &trans &trans &trans        &trans &trans &trans &trans &trans
             >;
