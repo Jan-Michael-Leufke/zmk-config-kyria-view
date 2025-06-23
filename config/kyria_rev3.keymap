@@ -76,7 +76,7 @@
             bindings = <
             &kp ESC &kp EXCL &kp LT &kp GT &kp STAR &kp AT              &trans &kp FSLH &kp LBRC &kp RBRC &kp BSLH &kp QMARK
             &kp RCTRL &kp HASH &kp DQT   &kp APOS &kp GRAVE &kp CARET                    &kp MINUS &kp LPAR &kp RPAR &kp EQUAL &kp SEMI &kp PLUS
-            &kp LSHFT &kp TILDE &kp DOLLAR &kp PERCENT &kp AMPS &kp PIPE &trans &trans        &trans &trans &trans &UNDER &kp LBKT &kp RBKT &kp COLON &trans
+            &kp LSHFT &kp TILDE &kp DOLLAR &kp PERCENT &kp AMPS &kp PIPE &trans &trans        &trans &trans &trans &kp UNDER &kp LBKT &kp RBKT &kp COLON &trans
             &trans &trans &trans &trans &trans        &trans &trans &trans &trans &trans
             >;
 
