@@ -59,7 +59,7 @@
             //                       |      |      |      |      |      |      |      |      |      |      |      |      |
             bindings = <
             &trans &trans &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2              &trans &trans &kp UP &trans &trans &kp PG_UP
-            &RCTRL &trans &trans     &bt BT_SEL 3 &bt BT_SEL 4 &trans                    &kp LC(LEFT) &kp LEFT &kp DOWN &kp RIGHT &kp LC(RIGHT) &kp PG_DN
+            &kp RCTRL &trans &trans     &bt BT_SEL 3 &bt BT_SEL 4 &trans                    &kp LC(LEFT) &kp LEFT &kp DOWN &kp RIGHT &kp LC(RIGHT) &kp PG_DN
             &trans &trans &trans &trans &trans &trans &trans &trans        &trans &trans &trans &kp HOME &trans &kp END &trans &kp K_APP
             &trans &trans &trans &trans &trans        &trans &trans &trans &trans &trans
             >;
